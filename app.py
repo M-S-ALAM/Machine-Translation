@@ -1,10 +1,21 @@
 import streamlit as st
 
-st.title('Text conversion into german to english')
+import streamlit as st
 
-text_input = st.text_input(
-        "Enter some text 👇",
-        placeholder=st.session_state.placeholder)
+# Set a title for the app
+st.title('Text Conversion: German to English')
 
-if text_input:
-    st.write("You entered: ", text_input)
+# Create a text input widget
+text_input = st.text_area("Enter some text 👇", height=50)
+def translate_text(text):
+    return text
+# Create a submit button
+if st.button("Submit"):
+    # Assuming you have a function to translate text
+    # Replace `translate_text` with your actual translation function
+    translated_text = translate_text(text_input)
+
+    # Display the translated text
+    st.write("Translated text:")
+    st.write(translated_text)
+
